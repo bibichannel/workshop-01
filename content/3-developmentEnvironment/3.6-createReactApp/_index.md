@@ -1,9 +1,9 @@
 ---
-title : "Preparing VPC and EC2"
+title : "Create React Application"
 date : "`r Sys.Date()`"
-weight : 1
+weight : 6
 chapter : false
-pre : " <b> 2.1 </b> "
+pre : " <b> 3.6 </b> "
 ---
 
 In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.

@@ -1,12 +1,18 @@
 ---
-title : "Preparing VPC and EC2"
+title : "Check internet connection"
 date : "`r Sys.Date()`"
-weight : 1
+weight : 5
 chapter : false
-pre : " <b> 2.1 </b> "
+pre : " <b> 3.5 </b> "
 ---
 
-In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
+Sau khi ta hoàn đã đả thông internet cho EC2 trong private subnet kết nối ra ngoài internet. Ta quay lại giao diện của Cloud9 IDE tiến hành:
+- `curl google.com`
 
-The architecture overview after you complete this step will be as follows:
+![IMAGE](/images/3-developmentEnvironment/3.5-checkConnectionInternet/001-checkInternet.png)
 
+- `ping 8.8.8.8`
+
+![IMAGE](/images/3-developmentEnvironment/3.5-checkConnectionInternet/002-checkInternet.png)
+
+Như ta đã thấy Ec2 đã connect internet thành công.
