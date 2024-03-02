@@ -1,5 +1,5 @@
 ---
-title : "Session Management"
+title : "Phát triển và triển khai static website lên AWS Cloud"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
