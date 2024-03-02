@@ -12,7 +12,6 @@ pre : " <b> 5. </b> "
 
 Chúng ta sẽ cấu hình **Port Forwarding** cho kết nối RDP giữa máy của mình với **Private Windows Instance** nằm trong private subnet mà chúng ta đã tạo cho bài thực hành này.
 
-![port-fwd](/images/arc-04.png) 
 
 
 
@@ -21,14 +20,12 @@ Chúng ta sẽ cấu hình **Port Forwarding** cho kết nối RDP giữa máy c
 1. Truy cập vào [giao diện quản trị dịch vụ IAM](https://console.aws.amazon.com/iamv2/home)
   + Click **Users** , sau đó click **Add users**.
 
-![FWD](/images/5.fwd/001-fwd.png)
 
 2. Tại trang **Add user**.
   + Tại mục **User name**, điền **Portfwd**.
   + Click chọn **Access key - Programmatic access**.
   + Click **Next: Permissions**.
   
-![FWD](/images/5.fwd/002-fwd.png)
 
 3. Click **Attach existing policies directly**.
   + Tại ô tìm kiếm , điền **ssm**.
@@ -79,15 +76,10 @@ Chứng tỏ bạn chưa cài Session Manager Plugin thành công. Bạn có th�
   + Tại mục Computer: điền **localhost:9999**.
 
 
-![FWD](/images/5.fwd/003-fwd.png)
 
 
 3. Quay trở lại giao diện quản trị của dịch vụ System Manager - Session Manager.
   + Click tab **Session history**.
   + Chúng ta sẽ thấy các session logs với tên Document là **AWS-StartPortForwardingSession**.
-
-
-![FWD](/images/5.fwd/004-fwd.png)
-
 
 Chúc mừng bạn đã hoàn tất bài thực hành hướng dẫn cách sử dụng Session Manager để kết nối cũng như lưu trữ các session logs trong S3 bucket. Hãy nhớ thực hiện bước dọn dẹp tài nguyên để tránh sinh chi phí ngoài ý muốn nhé.

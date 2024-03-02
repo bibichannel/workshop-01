@@ -1,20 +1,12 @@
 ---
-title : "Connect to Private instance"
+title : "Preparing VPC and EC2"
 date : "`r Sys.Date()`"
-weight : 2
+weight : 1
 chapter : false
-pre : " <b> 3.2. </b> "
+pre : " <b> 2.1 </b> "
 ---
-For **Windows instance** located in **private subnet**, there is no **public IP**, no **internet gateway** so it cannot go out **internet.**\
-With this type of instance, the traditional way is to use Bastion host technique which is expensive and laborious, but here we will use Session Manager with this type.\
-Basically, the **private instance** still has to open the **TCP 443** port to **System Manager**, but we don't want to allow connection go out to the internet, but only in its  VPC, to enhance our security posture.\
-To do that, we have to include the System Manager endpoint in the VPC, that is, using the **VPC interface endpoint:**
 
-![ConnectPrivate](/images/arc-03.png) 
+In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
 
-**VPC interface endpoint** is attached to the subnet, so this method can be done not only with **private subnet** but also with **public subnet**, meaning that with **public subnet**, you can completely prohibit **TCP 443** go out to the internet.
+The architecture overview after you complete this step will be as follows:
 
-### Content:
-   - [Enable DNS hostnames](./3.2.1-enablevpcdns/)
-   - [Create VPC Endpoint](./3.2.2-createvpcendpoint/)
-   - [Connect Private Instance](./3.3.3-connectec2/)

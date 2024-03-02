@@ -1,17 +1,19 @@
 ---
-title : "Preparing VPC and EC2"
+title : "Create VPC"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
+Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private.
+VPC này sẽ được dùng để triển khai môi trường development cho React App của chúng ta thông qua Cloud9 Service.
 
-The architecture overview after you complete this step will be as follows:
+Tổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:
 
-![VPC](/images/arc-01.png)
+![VPC](images\2-prerequiste\2.1-createVPC\001-networkVPC.png)
 
-To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:
-  - [About Amazon EC2](https://000004.awsstudygroup.com/en/)
-  - [Works with Amazon VPC](https://000003.awsstudygroup.com/en/)
+
+
+Để tìm hiểu cách tạo VPC thủ công với public/private subnet các bạn có thể tham khảo bài lab :
+  - [Làm việc với Amazon VPC](https://000003.awsstudygroup.com/vi/)
