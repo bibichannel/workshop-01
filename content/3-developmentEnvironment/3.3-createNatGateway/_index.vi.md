@@ -1,10 +1,27 @@
 ---
-title : "Chuẩn bị VPC và EC2"
+title : "Tạo NAT gateway"
 date :  "`r Sys.Date()`" 
-weight : 1 
+weight : 3
 chapter : false
-pre : " <b> 2.1 </b> "
+pre : " <b> 3.3 </b> "
 ---
 
-Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private. Sau đó tạo 1 EC2 Instance Linux nằm trong public subnet,  1 EC2 Instance Windows nằm trong private subnet.
+Truy cập vào VPC
+- Chọn NAT Gateways
+- Create NAT gateway
+
+Trong giao diện **Create NAT gateway**
+- Ta đặt tên như sau `workshop-01-ngw`
+- **Subnet** ta chọn **public subnet**
+- **Connectivity type** ta chọn **Public**
+- **Elastic IP allocation ID** chọn EIP ta vừa mới tạo
+- Chọn **Create NAT gateway**
+
+![IMAGE](/images/3-developmentEnvironment/3.3-createNatGateway/001-createNAT.png)
+
+Thành công tạo NAT gateway
+
+![IMAGE](/images/3-developmentEnvironment/3.3-createNatGateway/002-createNAT.png)
+
+
 

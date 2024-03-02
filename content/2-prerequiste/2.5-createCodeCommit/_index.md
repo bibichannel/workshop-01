@@ -20,9 +20,9 @@ Tất cả những lý do trên đều thuyết phục ta nên sử dụng CodeC
 - Phần miêu tả ta điền: `Repository for react application`
 - Click vào **Create**
 
-![VPC](/images/2-prerequiste/2.5-createCodeCommit/001-createCodeCommit.png)
+![IMAGE](/images/2-prerequiste/2.5-createCodeCommit/001-createCodeCommit.png)
 
 Việc tạo một repo trên CodeCommit khá là đơn giản và nhanh chóng. Chỉ vài bước ta đã có một **repository private** cho dự án của chúng ta.
 
-![VPC](/images/2-prerequiste/2.5-createCodeCommit/002-createCodeCommit.png)
+![IMAGE](/images/2-prerequiste/2.5-createCodeCommit/002-createCodeCommit.png)
 

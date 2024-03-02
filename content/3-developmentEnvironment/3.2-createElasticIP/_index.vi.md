@@ -1,10 +1,25 @@
 ---
-title : "Chuẩn bị VPC và EC2"
+title : "Tạo Elastic IP"
 date :  "`r Sys.Date()`" 
-weight : 1 
+weight : 2
 chapter : false
-pre : " <b> 2.1 </b> "
+pre : " <b> 3.2 </b> "
 ---
 
-Trong bước này, chúng ta sẽ cần tạo một VPC có 2 subnet public / private. Sau đó tạo 1 EC2 Instance Linux nằm trong public subnet,  1 EC2 Instance Windows nằm trong private subnet.
+Để tạo được NAT gateway ta cần phải tạo một Elastic IP public để gán vào NAT gateway.
+
+Truy cập EC2
+- Chọn **Elastic IPs**
+- Chọn **Allocate Elastic IP address**
+
+![IMAGE](/images/3-developmentEnvironment/3.2-createElasticIP/001-createEIP.png)
+
+Trong giao diện Allocate Elastic IP address
+- **Network border group** chọn đúng region bạn đang thực hành. Ở đây mình chọn **us-east-1** 
+- **Public IPv4 address pool**, chọn **Amazon’s pool of IPv4 addresses**
+- Chọn **Allocate**
+
+![IMAGE](/images/3-developmentEnvironment/3.2-createElasticIP/002-createEIP.png)
+
+Vậy là ta đã tạo thành công Elastic IP.
 

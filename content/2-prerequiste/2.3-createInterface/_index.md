@@ -14,32 +14,33 @@ Vì thế trong phần hướng dẫn này chúng ta sẽ tạo 3 interface sau:
 
 {{%notice info%}}
 Để tạo được VPC Endpoint chúng ta sẽ cần bật tính năng DNS hostnames trên VPC. Nhớ lại một chút lúc ban đầu chúng ta tạo VPC đã tích enable tính năng này rồi.
+Bạn có thể tham khảo thêm [tại đây](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-prerequisites.html)
 
 {{%/notice%}}
 
 Truy cập đến giao diện quản trị của dịch vụ VPC click **Endpoint**, sau đó click **Create Endpoint**.
 
-![VPC](/images/2-prerequiste/2.3-createInterface/001-createEndpoint.png)
+![ENPOINT](/images/2-prerequiste/2.3-createInterface/001-createEndpoint.png)
 
 Ở trang Create endpoint.
 - Ở phần **Name tag** ta điền `Ssm`.
 - Ở phần **Service category** chọn: AWS services
 
-![VPC](/images/2-prerequiste/2.3-createInterface/002-createEndpoint.png)
+![ENPOINT](/images/2-prerequiste/2.3-createInterface/002-createEndpoint.png)
 
 - Tiếp theo **Service Name** nhập: `ssm` sau đó chọn service name: **com.amazonaws.us-east-1.ssm**.
 - Tại mục VPC, chọn **workshop-01-vpc**.
 - Chọn AZ đầu tiên và chọn **private subnet**
 
-![VPC](/images/2-prerequiste/2.3-createInterface/003-createEndpoint.png)
+![ENPOINT](/images/2-prerequiste/2.3-createInterface/003-createEndpoint.png)
 
 Kéo chuột xuống dưới.
 - Tại mục **Security Group**, chọn security group **VPC Endpoint** mà chúng ta đã tạo trước đó.
 - Tại mục **Policy**, chọn **Full access**
 
-![VPC](/images/2-prerequiste/2.3-createInterface/004-createEndpoint.png)
+![ENPOINT](/images/2-prerequiste/2.3-createInterface/004-createEndpoint.png)
 
 **Tiếp tục tạo thêm 2 interface enpoint nữa và dưới đây là kết quả sau khi ta đã tạo xong.**
 
-![VPC](/images/2-prerequiste/2.3-createInterface/005-createEndpoint.png)
+![ENPOINT](/images/2-prerequiste/2.3-createInterface/005-createEndpoint.png)
 

@@ -19,11 +19,11 @@ Về cơ bản, đường dẫn cần phải tuân thủ DNS và không thể c�
 
 {{%/notice%}}
 
-![VPC](/images/2-prerequiste/2.4-createS3/001-createS3.png)
+![S3](/images/2-prerequiste/2.4-createS3/001-createS3.png)
 
 Ở dưới ta sẽ giữ nguyên cấu hình mặc định và click **Create bucket**.
 
-![VPC](/images/2-prerequiste/2.4-createS3/002-createS3.png)
+![S3](/images/2-prerequiste/2.4-createS3/002-createS3.png)
 
 {{%notice info%}}
 Chú ý một chút ở phần Block all public access. Ta sẽ vẫn bật tính năng này vì thứ phân phối nội dung chúng ta ra public internet sẽ là CloudFront chứ không phải S3 bucket.
