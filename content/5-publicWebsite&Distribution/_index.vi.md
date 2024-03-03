@@ -1,82 +1,26 @@
-+++
-title = "Dọn dẹp tài nguyên  "
-date = 2021
-weight = 6
-chapter = false
-pre = "<b>6. </b>"
-+++
+---
+title : "Public website"
+date :  "`r Sys.Date()`" 
+weight : 5
+chapter : false
+pre : " <b> 5. </b> "
+---
 
-Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này.
+Ở phần hướng dẫn này chúng ta sẽ tiếp tục sử dụng Cloudfront và Route53 để public website của chúng ta ra ngoài internet. 
 
-#### Xóa EC2 instance
+Chúng ta cũng có thể public website trên S3 luôn mà không cần sử dụng 2 dịch vụ trên nhưng:
 
-1. Truy cập [giao diện quản trị dịch vụ EC2](https://console.aws.amazon.com/ec2/v2/home)
-  + Click **Instances**.
-  + Click chọn cả 2 instance **Public Linux Instance** và **Private Windows Instance**. 
-  + Click **Instance state**.
-  + Click **Terminate instance**, sau đó click **Terminate** để xác nhận.
+| Amazon S3 | CloudFront|
+| ----------- | ----------- |
+| Việc đưa trang web trực tiếp lên Amazon S3 là một cách đơn giản và chi phí thấp để triển khai trang web tĩnh. | CloudFront cung cấp một lớp cache phía trước cho trang web, giúp cải thiện hiệu suất truy cập bằng cách giảm độ trễ và tải nội dung từ các edge location gần người dùng. |
+| uy nhiên, nó không hỗ trợ các tính năng như HTTP/2, TLS termination, hoặc cache phía trước. | CloudFront cung cấp khả năng bảo mật cao hơn thông qua tính năng như SSL/TLS encryption, access control, và khả năng chống DDoS. |
 
-2. Truy cập [giao diện quản trị dịch vụ IAM](https://console.aws.amazon.com/iamv2/home#/home)
-  + Click **Roles**.
-  + Tại ô tìm kiếm , điền **SSM**.
-  + Click chọn **SSM-Role**.
-  + Click **Delete**, sau đó điền tên role **SSM-Role** và click **Delete** để xóa role.
-  
+Vì vậy mình nghĩ rằng chả có lí do gì mà ta không sử dụng Cloudfront để tăng tốc website, cũng như bảo mật nó tốt hơn.
 
+Và Route 53 sẽ giúp ta quản lí tên miền của mình, trỏ domain tới url Cloudfront distribution resource.
 
-3. Click **Users**.
-  + Click chọn user **Portfwd**.
-  + Click **Delete**, sau đó điền tên user **Portfwd** và click **Delete** để xóa user.
-
-#### Xóa S3 bucket
-
-1. Truy cập [giao diện quản trị dịch vụ System Manager - Session Manager](https://console.aws.amazon.com/systems-manager/session-manager).
-  + Click tab **Preferences**.
-  + Click **Edit**.
-  + Kéo chuột xuống dưới.
-  + Tại mục **S3 logging**.
-  + Bỏ chọn **Enable** để tắt tính năng logging.
-  + Kéo chuột xuống dưới.
-  + Click **Save**.
-
-2. Truy cập [giao diện quản trị dịch vụ S3](https://s3.console.aws.amazon.com/s3/home)
-  + Click chọn S3 bucket chúng ta đã tạo cho bài thực hành. ( Ví dụ : lab-fcj-bucket-0001 )
-  + Click **Empty**.
-  + Điền **permanently delete**, sau đó click **Empty** để tiến hành xóa object trong bucket.
-  + Click **Exit**.
-
-3. Sau khi xóa hết object trong bucket, click **Delete**
-
-
-
-4. Điền tên S3 bucket, sau đó click **Delete bucket** để tiến hành xóa S3 bucket.
-
-
-
-#### Xóa các VPC Endpoint
-
-1. Truy cập vào [giao diện quản trị dịch vụ VPC](https://console.aws.amazon.com/vpc/home)
-  + Click **Endpoints**.
-  + Chọn 4 endpoints chúng ta đã tạo cho bài thực hành bao gồm **SSM**, **SSMMESSAGES**, **EC2MESSAGES**, **S3GW**.
-  + Click **Actions**.
-  + Click **Delete VPC endpoints**.
-
-
-
-2. Tại ô confirm , điền **delete**.
-  + Click **Delete** để tiến hành xóa các endpoints.
-
-3. Click biểu tượng refresh, kiểm tra tất cả các endpoints đã bị xóa trước khi làm bước tiếp theo.
-
-
-
-#### Xóa VPC
-
-1. Truy cập vào [giao diện quản trị dịch vụ VPC](https://console.aws.amazon.com/vpc/home)
-  + Click **Your VPCs**.
-  + Click chọn **Lab VPC**.
-  + Click **Actions**.
-  + Click **Delete VPC**.
-
-2. Tại ô confirm, điền **delete** để xác nhận, click **Delete** để thực hiện xóa **Lab VPC** và các tài nguyên liên quan.
-
+### Nội dung
+- [Tạo Hosted zone](5.1-createHostedZone/)
+- [Tạo ACM](5.2-createACM/)
+- [Tạo Cloudfront distribution](5.3-createCloudfront/)
+- [Tạo record](5.4-createRecord/)

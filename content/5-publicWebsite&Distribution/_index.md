@@ -1,80 +1,27 @@
-+++
-title = "Clean up resources"
-date = 2022
-weight = 6
-chapter = false
-pre = "<b>6. </b>"
-+++
+---
+title : "Public website & distribution"
+date :  "`r Sys.Date()`" 
+weight : 5
+chapter : false
+pre : " <b> 5. </b> "
+---
 
-We will take the following steps to delete the resources we created in this exercise.
+Ở phần hướng dẫn này chúng ta sẽ tiếp tục sử dụng Cloudfront và Route53 để public website của chúng ta ra ngoài internet. 
 
-#### Delete EC2 instance
+Chúng ta cũng có thể public website trên S3 luôn mà không cần sử dụng 2 dịch vụ trên nhưng:
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   + Click **Instances**.
-   + Select both **Public Linux Instance** and **Private Windows Instance** instances.
-   + Click **Instance state**.
-   + Click **Terminate instance**, then click **Terminate** to confirm.
+| Amazon S3 | CloudFront|
+| ----------- | ----------- |
+| Việc đưa trang web trực tiếp lên Amazon S3 là một cách đơn giản và chi phí thấp để triển khai trang web tĩnh. | CloudFront cung cấp một lớp cache phía trước cho trang web, giúp cải thiện hiệu suất truy cập bằng cách giảm độ trễ và tải nội dung từ các edge location gần người dùng. |
+| uy nhiên, nó không hỗ trợ các tính năng như HTTP/2, TLS termination, hoặc cache phía trước. | CloudFront cung cấp khả năng bảo mật cao hơn thông qua tính năng như SSL/TLS encryption, access control, và khả năng chống DDoS. |
 
-2. Go to [IAM service management console](https://console.aws.amazon.com/iamv2/home#/home)
-   + Click **Roles**.
-   + In the search box, enter **SSM**.
-   + Click to select **SSM-Role**.
-   + Click **Delete**, then enter the role name **SSM-Role** and click **Delete** to delete the role.
+Vì vậy mình nghĩ rằng chả có lí do gì mà ta không sử dụng Cloudfront để tăng tốc website, cũng như bảo mật nó tốt hơn.
 
+Và Route 53 sẽ giúp ta quản lí tên miền của mình, trỏ domain tới url Cloudfront distribution resource.
 
-3. Click **Users**.
-   + Click on user **Portfwd**.
-   + Click **Delete**, then enter the user name **Portfwd** and click **Delete** to delete the user.
+### Nội dung
+- [Tạo Hosted zone](5.1-createHostedZone/)
+- [Tạo ACM](5.2-createACM/)
+- [Tạo Cloudfront distribution](5.3-createCloudfront/)
+- [Tạo record](5.4-createRecord/)
 
-#### Delete S3 bucket
-
-1. Access [System Manager - Session Manager service management console](https://console.aws.amazon.com/systems-manager/session-manager).
-   + Click the **Preferences** tab.
-   + Click **Edit**.
-   + Scroll down.
-   + In the section **S3 logging**.
-   + Uncheck **Enable** to disable logging.
-   + Scroll down.
-   + Click **Save**.
-
-2. Go to [S3 service management console](https://s3.console.aws.amazon.com/s3/home)
-   + Click on the S3 bucket we created for this lab. (Example: lab-fcj-bucket-0001 )
-   + Click **Empty**.
-   + Enter **permanently delete**, then click **Empty** to proceed to delete the object in the bucket.
-   + Click **Exit**.
-
-3. After deleting all objects in the bucket, click **Delete**
-
-
-
-4. Enter the name of the S3 bucket, then click **Delete bucket** to proceed with deleting the S3 bucket.
-
-
-
-#### Delete VPC Endpoints
-
-1. Go to [VPC service management console](https://console.aws.amazon.com/vpc/home)
-   + Click **Endpoints**.
-   + Select the 4 endpoints we created for the lab including **SSM**, **SSMMESSAGES**, **EC2MESSAGES**, **S3GW**.
-   + Click **Actions**.
-   + Click **Delete VPC endpoints**.
-
-
-
-2. In the confirm box, enter **delete**.
-   + Click **Delete** to proceed with deleting endpoints.
-
-3. Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.
-
-
-
-#### Delete VPC
-
-1. Go to [VPC service management console](https://console.aws.amazon.com/vpc/home)
-   + Click **Your VPCs**.
-   + Click on **Lab VPC**.
-   + Click **Actions**.
-   + Click **Delete VPC**.
-
-2. In the confirm box, enter **delete** to confirm, click **Delete** to delete **Lab VPC** and related resources.

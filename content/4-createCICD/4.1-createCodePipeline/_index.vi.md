@@ -20,9 +20,6 @@ pre : " <b> 4.1 </b> "
 ![IMAGE](/images/4-createCICD/4.1-createCodePipeline/002-createPipeline.png)
 
 {{%notice info%}}
-V1 type pipelines have a JSON structure that contains standard pipeline, stage, and action-level parameters.
-V2 type pipelines have the same structure as a V1 type, along with additional parameter support, such as triggers on Git tags and pipeline-level variables.
-
 **Superseded(Bị thay thế)** được hiểu là khi một thực thi mới được kích hoạt (chẳng hạn khi bạn đưa ra một thay đổi vào mã nguồn), nó sẽ được bắt đầu và thực hiện các bước trong quy trình triển khai. Trong quá trình này, nếu có một thực thi khác đang chạy cùng lúc, quy trình triển khai có thể tự động dừng và thay thế thực thi cũ hơn bằng thực thi mới hơn.
 
 {{%/notice%}}
