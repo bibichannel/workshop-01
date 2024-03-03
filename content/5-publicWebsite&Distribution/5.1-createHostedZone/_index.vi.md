@@ -1,5 +1,5 @@
 ---
-title : "Tạo hosted zone trên Route 53"
+title : "Tạo hosted zone"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
@@ -8,7 +8,7 @@ pre : " <b> 5.1 </b> "
 
 Ở đây vì mình đang sở hữu domain name có tên là `bibichannel.site` ở domain registrar khác nên ở Route 53 mình sẽ tạo một hosted zone để quản lí tên miền con của mình.
 
-Và tên miền con này sẽ được mình dùng để phân giải ra địa chỉ url resource của thằng Cloudfront.
+Và tên miền con này sẽ được mình dùng để phân giải ra địa chỉ url resource của thằng Cloudfront ditribution.
 
 - Truy cập vào Console Route 53 ta chọn **Hosted zones** sau đó click **Create hosted zone**
 
@@ -27,7 +27,7 @@ Và tên miền con này sẽ được mình dùng để phân giải ra địa 
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.1-createHostedZone/003-hostedZone.png)
 
-- Tiếp theo ta cần phải tạo các record NS tại domain registrar mà ta đã đăng ký tên miền trỏ về **Name server** của aws.
+- Tiếp theo ta cần phải tạo các record NS tại domain registrar mà ta đã đăng ký tên miền trỏ về **Name server** của AWS.
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.1-createHostedZone/004-hostedZone.png)
 

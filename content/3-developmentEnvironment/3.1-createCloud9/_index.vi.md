@@ -45,4 +45,7 @@ Ta sẽ thực hiện ping 8.8.8.8 xem có thông internet không. Thì ta thấ
 
 ![IMAGE](/images/3-developmentEnvironment/3.1-createCloud9/007-createCloud9.png)
 
+{{%notice note%}}
 Như mình đã nói ở trên chúng ta sẽ không thể cài đặt các depedencies cần thiết cho dự án của chúng ta được nên bước tiếp theo ta cần phải làm nó thông ra internet thông qua việc tạo NAT gateway.
+
+{{%/notice%}}

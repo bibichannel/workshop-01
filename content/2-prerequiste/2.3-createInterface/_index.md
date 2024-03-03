@@ -12,7 +12,7 @@ Vì thế trong phần hướng dẫn này chúng ta sẽ tạo 3 interface sau:
 2. Service **com.amazonaws.<region>.ec2messages** với tên `Ec2message`
 3. Service **com.amazonaws.<region>.ssmmessages** với tên `Ssmmessage`
 
-{{%notice info%}}
+{{%notice note%}}
 Để tạo được VPC Endpoint chúng ta sẽ cần bật tính năng DNS hostnames trên VPC. Nhớ lại một chút lúc ban đầu chúng ta tạo VPC đã tích enable tính năng này rồi.
 Bạn có thể tham khảo thêm [tại đây](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-prerequisites.html)
 

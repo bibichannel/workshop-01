@@ -37,7 +37,7 @@ Trong giao diện **Create VPC**
 
 ![VPC](/images/2-prerequiste/2.1-createVPC/004-createVPC.png)
 
-{{% notice info %}}
+{{% notice note%}}
 **Tại sao không tạo luôn NAT Gateway?**. Trên diagram kiến trúc ban đầu đúng là có NAT Gateway. Nhưng mình sẽ hướng dẫn bạn tạo nó ở phần sau. Khi chúng ta biết rằng NAT sẽ có vai trò gì trong mô hình này.
 
 {{% /notice %}}

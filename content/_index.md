@@ -7,12 +7,9 @@ chapter : false
 
 ### Tổng quan
 
-Cloud Computing hiện tại đang dần trở thành xu thế của thế giới. Rất nhiều công ty đang dần xây dựng, đưa cơ sở hạ tầng cùa mình lên cloud vì tính chất: nhanh chóng, sự đàn hồi, tiết kiệm chi phí, triển khai toàn cầu trong vòng vài phút.
-- Và vì thế trong phần hướng dẫn này, mình sẽ hướng dẫn các bạn thực hiện triển khai quá trình phát triển ứng dụng react application của mình ngay trên cloud AWS nhờ công cụ Cloud9 IDE. 
-- Tiếp đó là thực hiện tạo CI/CD cho dự án của chúng ta qua bộ công cụ Codepipeline.
-- Và cuối cùng là phân phối nội dung website đến toàn cầu thông qua Cloudfront và quản lí tên miền của riêng ta thông qua Route 53.
+Workshop này sẽ hướng dẫn bạn phát triển và triển khai tự động một trang web tĩnh trên AWS cloud với các dịch vụ Cloud9, S3, Codepiple, Cloudfront, Route53,..
 
-Cùng xem diagram dưới đây để hình dung ra bức tranh toàn cảnh của bài lab này.
+Cùng xem diagram dưới đây để hình dung ra bức tranh toàn cảnh của workshop này.
 
 ![IMAGE](/images/1-introduce/001-introduce.png)
 

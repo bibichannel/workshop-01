@@ -19,7 +19,7 @@ Trong giao diện **Create NAT gateway**
 
 ![IMAGE](/images/3-developmentEnvironment/3.3-createNatGateway/001-createNAT.png)
 
-Thành công tạo NAT gateway
+Thành công tạo **NAT gateway**
 
 ![IMAGE](/images/3-developmentEnvironment/3.3-createNatGateway/002-createNAT.png)
 

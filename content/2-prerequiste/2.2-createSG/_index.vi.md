@@ -25,7 +25,7 @@ Vì ta sẽ tạo Cloud9 no-ingress ec2 instance nên ta cần phải tạo Secu
 
 ![SG](/images/2-prerequiste/2.2-createSG/003-createSG.png)
 
-{{% notice info %}}
+{{% notice note%}}
 Với inbound rule có source là CIDR của VPC cho phép các tài nguyên nằm trong VPC có thể gửi traffic tới security group này.
 
 {{% /notice %}}

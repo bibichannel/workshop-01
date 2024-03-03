@@ -25,7 +25,7 @@ Về cơ bản, đường dẫn cần phải tuân thủ DNS và không thể c�
 
 ![S3](/images/2-prerequiste/2.4-createS3/002-createS3.png)
 
-{{%notice info%}}
+{{%notice note%}}
 Chú ý một chút ở phần Block all public access. Ta sẽ vẫn bật tính năng này vì thứ phân phối nội dung chúng ta ra public internet sẽ là CloudFront chứ không phải S3 bucket.
 
 {{%/notice%}}

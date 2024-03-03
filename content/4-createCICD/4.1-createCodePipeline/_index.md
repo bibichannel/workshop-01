@@ -15,12 +15,12 @@ pre : " <b> 4.1 </b> "
 2. Trong giao diện tạo CodePipeline
 - Nhập `react-deploy-pipeline` vào **Pipeline name**
 - **Pipeline type** trong bài lab này ta chọn **V1** là đủ 
-- Với **Excution mode** ta chọn Superseded
+- Với **Excution mode** ta chọn **Superseded**
 
 ![IMAGE](/images/4-createCICD/4.1-createCodePipeline/002-createPipeline.png)
 
 {{%notice info%}}
-**Superseded(Bị thay thế)** được hiểu là khi một thực thi mới được kích hoạt (chẳng hạn khi bạn đưa ra một thay đổi vào mã nguồn), nó sẽ được bắt đầu và thực hiện các bước trong quy trình triển khai. Trong quá trình này, nếu có một thực thi khác đang chạy cùng lúc, quy trình triển khai có thể tự động dừng và thay thế thực thi cũ hơn bằng thực thi mới hơn.
+**Superseded (Bị thay thế)** được hiểu là khi một thực thi mới được kích hoạt (chẳng hạn khi bạn đưa ra một thay đổi vào mã nguồn), nó sẽ được bắt đầu và thực hiện các bước trong quy trình triển khai. Trong quá trình này, nếu có một thực thi khác đang chạy cùng lúc, quy trình triển khai có thể tự động dừng và thay thế thực thi cũ hơn bằng thực thi mới hơn.
 
 {{%/notice%}}
 
@@ -69,7 +69,7 @@ Một tab mới hiện ra cho chúng ta cấu hình CodeBuild project
 
 ![IMAGE](/images/4-createCICD/4.1-createCodePipeline/010-createPipeline.png)
 
-- Ở phần **BuildSpec**, trong khuôn khổ của bài lab này ta sẽ thực hiện thêm cấu hình trực tiếp vào **phần Build Commands**. 
+- Ở phần **BuildSpec**, trong khuôn khổ của bài lab này ta sẽ thực hiện thêm cấu hình trực tiếp vào phần **Build Commands**. 
 
 {{%notice info%}}
 Còn thực tế họ sẽ thêm một file `buildspec.yml` vào root repo của dự án. Điều này giúp cho developer có thể dễ dàng chỉnh sửa quá trình build mà không cần phải truy cập vào console CodeBuild của aws.
@@ -128,12 +128,12 @@ Về syntax và ví dụ về cấu hình buildspec bạn có thể tham khảo 
 5. Đối với **Deploy stage**
 - Ta chọn deploy lên **S3**
 - **Region** của S3 là ở **N.Virginia**
-- Bucket ta chọn **workshop-01-react** ta tạo ở bước [chuẩn bị]()
-- Tick chọn **Extract file before deploy** để giải nén các tệp ra bucket của chúng ta.
+- Bucket ta chọn **workshop-01-react** ta tạo ở [bước 2.4](../../2-prerequiste/2.4-createS3/)
+- Tích chọn **Extract file before deploy** để giải nén các tệp ra bucket của chúng ta.
 
 ![IMAGE](/images/4-createCICD/4.1-createCodePipeline/016-createPipeline.png)
 
-- Chọn Next
+- Chọn **Next**
 - Bước tiếp theo sẽ là review lại quá trình mình tạo profile cho CodePipeline
 
 ![IMAGE](/images/4-createCICD/4.1-createCodePipeline/017-createPipeline.png)
