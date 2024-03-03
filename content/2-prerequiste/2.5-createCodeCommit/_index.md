@@ -6,23 +6,23 @@ chapter : false
 pre : " <b> 2.5 </b> "
 ---
 
-Chúng ta cần một nơi có thể lưu trữ source code của chúng ta mỗi khi phát triển một ứng dụng và cùng với đó là chúng ta cần phải bảo mật source code của chúng ta.
+We need a secure place to store our source code every time we develop an application, and along with that, we need to secure our source code.
 
-Với github, bitbucket, gitlab,... là các repo công cộng tuy có cung cấp cho ta các gói lưu trữ source code riêng tư nhưng đòi hỏi phải trả phí và các hợp đồng rằng buộc cũng như không chắc chắn server của họ không có downtime.
+While GitHub, Bitbucket, GitLab, etc., provide private repository storage options, they often require payment and contractual obligations, and there's no guarantee of server uptime
 
-Trong khi đó aws cung cấp cho ta một dịch vụ có lưu trữ repository riêng tư là CodeCommit, nó tích hợp tốt với các dịch vụ aws khác cùng với khả năng bảo mật và quản lý quyền truy cập thông qua **IAM**.
+In contrast, AWS provides us with a service called CodeCommit, which offers private repository storage. It integrates well with other AWS services and provides security and access control through IAM.
 
-Tất cả những lý do trên đều thuyết phục ta nên sử dụng CodeCommit. Và trong phần này chúng ta sẽ cùng tạo dịch vụ trên.
+All of these reasons convince us to use CodeCommit. In this section, we will create a repository using CodeCommit.
 
-1. Đầu tiên. chúng ta sẽ tạo một repository codecommit.
-- Truy cập vào CodeCommit
-- Nhập tên của dự án ta muốn lưu trữ: `workshop-01-react`
-- Phần miêu tả ta điền: `Repository for react application`
-- Click vào **Create**
+1. Firstly, let's create a CodeCommit repository.
+- Access **CodeCommit**.
+- Enter the name of the project we want to store: `workshop-01-react`.
+- PEnter the description:  `Repository for react application`.
+- Click **Create**.
 
 ![IMAGE](/images/2-prerequiste/2.5-createCodeCommit/001-createCodeCommit.png)
 
-Việc tạo một repo trên CodeCommit khá là đơn giản và nhanh chóng. Chỉ vài bước ta đã có một **repository private** cho dự án của chúng ta.
+Creating a repository on CodeCommit is quite simple and fast. In just a few steps, we have a **private repository** for our project.
 
 ![IMAGE](/images/2-prerequiste/2.5-createCodeCommit/002-createCodeCommit.png)
 

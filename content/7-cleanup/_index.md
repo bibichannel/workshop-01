@@ -1,25 +1,25 @@
 ---
-title : "Clean up resources"
+title : "Resource Cleanup"
 date :  "`r Sys.Date()`" 
 weight : 7
 chapter : false
 pre : " <b> 7. </b> "
 ---
 
-Hãy huỷ các tài nguyên lần lượt theo list dưới đây.
+Let us proceed to dismantle the resources in accordance with the following list:
 
-1. Xoá Cloud9
-2. Xoá Nat gateway
-3. Giải phóng Elastic IP
-4. Xoá Interface endpoint
-5. Xoá VPC
-6. Xoá A record và CNAME record của Hosted zoned Route 53
-7. Xoá Hosted zoned Route 53
-8. Vô hiệu hoá Cloudfront sau đó Delete
-9. Xoá NS record của domain registrar của bạn
-10. Xoá Certificates của ACM
-11. Xoá CodePipeline
-12. Xoá CodeCommit
-13. Xoá Codebuild
-14. Empty object trong bucket và xoá S3 bucket
-15. Xoá role và policies liên quan.
+1. Terminate Cloud9.
+2. Remove the Nat gateway.
+3. Release the Elastic IP.
+4. Delete the Interface endpoint.
+5. Eliminate the VPC.
+6. Erase the A record and CNAME record of the Hosted zoned Route 53.
+7. Remove the Hosted zoned Route 53.
+8. Invalidate CloudFront and then proceed with deletion.
+9. Eliminate the NS record from your domain registrar.
+10. Delete the Certificates from ACM.
+11. Remove CodePipeline.
+12. Delete CodeCommit.
+13. Eliminate CodeBuild.
+14. Empty the objects within the bucket and proceed to delete the S3 bucket.
+15. Remove the role and associated policies.

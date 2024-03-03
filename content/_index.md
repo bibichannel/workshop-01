@@ -5,19 +5,17 @@ weight : 1
 chapter : false
 ---
 
-### Tổng quan
+### Overview
 
-Workshop này sẽ hướng dẫn bạn phát triển và triển khai tự động một trang web tĩnh trên AWS cloud với các dịch vụ Cloud9, S3, Codepiple, Cloudfront, Route53,..
-
-Cùng xem diagram dưới đây để hình dung ra bức tranh toàn cảnh của workshop này.
+This workshop aims to guide you through the development and automatic deployment of a static website on the AWS cloud utilizing services such as Cloud9, S3, CodePipeline, CloudFront, Route 53, etc.
 
 ![IMAGE](/images/1-introduce/001-introduce.png)
 
 ### Nội dung
-- [1. Giới thiệu](./1-introduce/)
-- [2. Chuẩn bị](./2-prerequiste/)
-- [3. Tạo môi trường phát triển](./3-developmentEnvironment/)
-- [4. Triển khai CI/CD pipeline](./4-createCICD/)
+- [1. Introduction](./1-introduce/)
+- [2. Preparation](./2-prerequiste/)
+- [3. Development Environment](./3-developmentEnvironment/)
+- [4. Creating the CI/CD Pipeline](./4-createCICD/)
 - [5. Public webite](./5-publicWebsite&Distribution/)
-- [6. Vô hiệu hoá Cache](./6-invalidateCacheCloudfront/)
-- [7. Dọn dẹp tài nguyên](./7-cleanup/)
+- [6. Cache Invalidation](./6-invalidateCacheCloudfront/)
+- [7. Resource Cleanup](./7-cleanup/)

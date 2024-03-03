@@ -6,12 +6,12 @@ chapter : false
 pre : " <b> 4. </b> "
 ---
 
-Để triển khai CI/CD Pipeline, AWS cung cấp cho ta bộ công cụ CodePipeline để thực hiện tự động hoá giữa quá phát triển và triển khai ứng dụng của chúng ta.
+To deploy a CI/CD Pipeline, AWS provides us with the CodePipeline toolkit to automate the integration between our development and deployment phases.
 
-CodePipeline là dịch vụ AWS cho phép chúng ta xây dựng qui trình khiển khai ứng dụng một cách liên tục và tự động. Với cách thức cấu hình đơn giản, CodePipeline có khả năng mô hình hoá trực quan các bước cần thiết để biên dịch, kiểm thử và triển khai các phiên bản cập nhật cho một ứng dụng hoặc dịch vụ.
+CodePipeline is an AWS service that enables us to build continuous and automated deployment processes. With its simple configuration approach, CodePipeline can visually model the necessary steps for compiling, testing, and deploying updates to an application or service.
 
-Tiếp sau đây sẽ là hướng dẫn chúng ta xây dựng một CI/CD Pipeline cho ứng dụng React của chúng ta.
+Below is a guide on how to build a CI/CD Pipeline for our React application.
 
-### Nội dung
-- [Tạo CodePipeline](4.1-createCodePipeline/)
-- [Kiểm tra thành quả](4.2-checkResult/)
+### Content
+- [Create CodePipeline](4.1-createCodePipeline/)
+- [Check the result](4.2-checkResult/)

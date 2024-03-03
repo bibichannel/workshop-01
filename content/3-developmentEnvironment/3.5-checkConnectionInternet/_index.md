@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3.5 </b> "
 ---
 
-Sau khi ta hoàn đã đả thông internet cho EC2 trong private subnet kết nối ra ngoài internet. Ta quay lại giao diện của Cloud9 IDE tiến hành:
+fter successfully enabling internet access for the EC2 instance in the private subnet to connect to the internet, we return to the Cloud9 IDE interface to proceed with the following:
 - `curl google.com`
 
 ![IMAGE](/images/3-developmentEnvironment/3.5-checkConnectionInternet/001-checkInternet.png)
@@ -15,4 +15,4 @@ Sau khi ta hoàn đã đả thông internet cho EC2 trong private subnet kết n
 
 ![IMAGE](/images/3-developmentEnvironment/3.5-checkConnectionInternet/002-checkInternet.png)
 
-Như ta đã thấy Ec2 đã connect internet thành công.
+As observed, the EC2 instance has successfully connected to the internet.

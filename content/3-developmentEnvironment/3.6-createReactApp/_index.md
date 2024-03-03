@@ -6,7 +6,19 @@ chapter : false
 pre : " <b> 3.6 </b> "
 ---
 
-In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
+In this section, we will deploy a simple React application. Cloud9 provides us with all the necessary libraries to do this without requiring any additional installations.
 
-The architecture overview after you complete this step will be as follows:
+1. Execute the following commands to create the project:
+```shell
+mkdir my-react-app
+cd my-react-app
+npx create-react-app .
+npm start
+```
+
+![IMAGE](/images/3-developmentEnvironment/3.6-createReactApp/001-createProject.png)
+
+2. If you want to view the running app, select **Preview**, and then choose **Preview Running Application**.
+
+![IMAGE](/images/3-developmentEnvironment/3.6-createReactApp/002-createProject.png)
 

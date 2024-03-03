@@ -6,14 +6,16 @@ chapter : false
 pre : " <b> 6. </b> "
 ---
 
-Vì khi ta kích hoạt pipeline mới deploy lên s3 bucket. Thì Cloudfront sẽ không biết được sự thay đổi của S3 để tự động cập nhật lại cache của cloudfront.
+Upon activating a new pipeline for deployment to the S3 bucket, CloudFront remains unaware of the changes within S3, thus failing to automatically update its cache. 
 
-Vì thế ta cần phải vô hiệu hoá cache của Cloudfront để nó cập nhật lại nội dung mới. Cloudfront cung cấp cho chúng ta tính năng **Invalidations**. Ta có thể tạo bằng tay hoặc CLI để có thể vô hiệu hoá Cache.
+Consequently, it becomes imperative to disable the cache of CloudFront to facilitate the refreshing of its content. CloudFront offers us the feature of Invalidations, which can be initiated manually or via CLI to invalidate the cache.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/001-invalidation.png)
 
-Chả lẽ ta lại phải làm thủ công việc này sao? Với quy trình CI/CD thì điều này không thể chấp nhận được. Nên trong phần này mình sẽ hướng dẫn các bạn làm nó tự động.
+**Shall we resort to manual intervention for this task?**
 
-### Nội dung
-- [Thêm stage trong Codepipeline](6.1-addStagePipeline/)
-- [Tạo code commit để check kết quả](6.2-createCommit/)
+Such an approach seems antiquated, especially within the context of CI/CD. Therefore, in this section, I will elucidate the process for automating this task.
+
+### Content
+- [Add Stage in Codepipeline](6.1-addStagePipeline/)
+- [Creating a Code Commit for Result Verification](6.2-createCommit/)

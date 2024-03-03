@@ -22,3 +22,4 @@ Hãy huỷ các tài nguyên lần lượt theo list dưới đây.
 12. Xoá CodeCommit
 13. Xoá Codebuild
 14. Empty object trong bucket và xoá S3 bucket
+15. Xoá role và policies liên quan.

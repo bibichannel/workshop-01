@@ -6,20 +6,20 @@ chapter : false
 pre : " <b> 3.3 </b> "
 ---
 
-Truy cập vào VPC
-- Chọn NAT Gateways
-- Create NAT gateway
+Access the VPC:
+- Select **NAT Gateways**.
+- Click on **Create NAT gateway**
 
-Trong giao diện **Create NAT gateway**
-- Ta đặt tên như sau `workshop-01-ngw`
-- **Subnet** ta chọn **public subnet**
-- **Connectivity type** ta chọn **Public**
-- **Elastic IP allocation ID** chọn EIP ta vừa mới tạo
-- Chọn **Create NAT gateway**
+In the **Create NAT gateway** interface:
+- Name it as follows: `workshop-01-ngw`
+- For **Subnet**, choose the **public subnet**.
+- For **Connectivity type**, select **Public**.
+- For **Elastic IP allocation ID**, choose the **Elastic IP** you just created.
+- Click **Create NAT gateway**.
 
 ![IMAGE](/images/3-developmentEnvironment/3.3-createNatGateway/001-createNAT.png)
 
-Thành công tạo **NAT gateway**
+You have successfully created the **NAT gateway**.
 
 ![IMAGE](/images/3-developmentEnvironment/3.3-createNatGateway/002-createNAT.png)
 

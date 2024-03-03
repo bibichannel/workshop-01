@@ -6,45 +6,45 @@ chapter : false
 pre : " <b> 3.1 </b> "
 ---
 
-1. Tại trang chủ của dịch vụ Clou9 ta click **Create environment**
+1. TOn the homepage of the Cloud9 service, click **Create environment**.
 
 ![IMAGE](/images/3-developmentEnvironment/3.1-createCloud9/001-createCloud9.png)
 
-2. Ở phần **Details**
-- Điền **Name** ta nhập `react-app-workshop`
-- **Environment type** ta chọn **New EC2 instance**
+2. In the **Details** section
+- Enter  **Name** as `react-app-workshop`.
+- Choose **Environment type** as **New EC2 instance**.
 
 ![IMAGE](/images/3-developmentEnvironment/3.1-createCloud9/002-createCloud9.png)
 
-3. Ở phần **New EC2 instance** 
-- Ta chọn loại instance **t3.small**
-- Với **Platform** ta chọn **Amazon linux 2**
-- **Timeout** ta để mặc định 30' khi không truy cập sẽ hibernate
+3. In the **New EC2 instance** section:
+- Select instance type **t3.small**
+- For **Platform** choose **Amazon linux 2**
+- Leave **Timeout** as default (30 minutes before hibernation due to inactivity).
 
 ![IMAGE](/images/3-developmentEnvironment/3.1-createCloud9/003-createCloud9.png)
 
-3. Phần network
-- Phần **Network settings** với Connection ta chọn **AWS Systems Manager (SSM)**
-- VPC Setting ta chọn **workshop-01-vpc** và **private subnet**
+3. Network section:
+- Under **Network settings**, choose **AWS Systems Manager (SSM)** for Connection.
+- For VPC Setting, select **workshop-01-vpc** and **private subnet**.
 - Click **Create Cloud9**
 
 ![IMAGE](/images/3-developmentEnvironment/3.1-createCloud9/004-createCloud9.png)
 
-4. Kiểm tra tạo thành công hay không
-Sau một khoảng thời gian tầm 10 - 30 phút ta đã tạo thành công Cloud9
+4. Check for successful creation:
+After approximately 10-30 minutes, the Cloud9 environment should be successfully created.
 
 ![IMAGE](/images/3-developmentEnvironment/3.1-createCloud9/005-createCloud9.png)
 
-5. Truy cập vào Cloud9
-Ta click vào Open Cloud9 IDE và truy cập vào giao diện của nó ta thấy bố cục cũng tương tự với các phần mềm IDE khác trên thị trường.
+5. Access Cloud9:
+Click on Open Cloud9 IDE to access its interface, which resembles other IDE software on the market.
 
 ![IMAGE](/images/3-developmentEnvironment/3.1-createCloud9/006-createCloud9.png)
 
-Ta sẽ thực hiện ping 8.8.8.8 xem có thông internet không. Thì ta thấy tất cả các gói gửi đi đều bị loss. Điều này chứng tỏ môi trường phát triển của chúng ta không thể đi ra ngoài internet. 
+You can perform a ping to 8.8.8.8 to check internet connectivity. However, all packets sent are lost, indicating that our development environment cannot access the internet.
 
 ![IMAGE](/images/3-developmentEnvironment/3.1-createCloud9/007-createCloud9.png)
 
 {{%notice note%}}
-Như mình đã nói ở trên chúng ta sẽ không thể cài đặt các depedencies cần thiết cho dự án của chúng ta được nên bước tiếp theo ta cần phải làm nó thông ra internet thông qua việc tạo NAT gateway.
+As mentioned earlier, we won't be able to install necessary dependencies for our project because of this. Therefore, in the next step, we need to enable internet access for our development environment by creating a NAT gateway.
 
 {{%/notice%}}

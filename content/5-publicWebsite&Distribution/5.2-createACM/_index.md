@@ -6,32 +6,32 @@ chapter : false
 pre : " <b> 5.2 </b> "
 ---
 
-Sử dụng AWS Certification Manager (ACM) để cung cấp, quản lý và triển khai các chứng chỉ SSL/TLS công khai và riêng tư để sử dụng với các dịch vụ AWS và tài nguyên. ACM loại bỏ quy trình mua, tải lên và gia hạn chứng chỉ SSL/TLS thủ công tốn nhiều thời gian.
+Utilizing the **AWS Certificate Manager (ACM)** facilitates the provisioning, management, and deployment of public and private SSL/TLS certificates for use with AWS services and resources. ACM streamlines the process of purchasing, uploading, and renewing SSL/TLS certificates, saving significant time.
 
-- Truy cập console của ACM, chọn **Request certificate** và click **Next**.
+- Access the ACM console, select **Request certificate**, and click **Next**.
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.2-createACM/001-createACM.png)
 
-- Ta cần yêu cầu chứng chỉ cho child domain `workshop-01.bibichannel.site`, nên ta điền vào phần **Fully qualified domain name**.
-- Về **Validation method** ta nên sử dụng **DNS validation** để quá trình thẩm định nhanh hơn.
-- Còn lại ta để mặc định.
+- Request a certificate for the child domain `workshop-01.bibichannel.site` by entering it in the **Fully qualified domain name field**.
+- For **Validation method**, it's advisable to use **DNS validation** for a quicker validation process.
+- Leave the rest as default.
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.2-createACM/002-createACM.png)
 
-- Chọn **Create** và ta đã tạo xong ACM, nhưng nó sẽ hiện status là **Pending validation**. Điều cần làm tiếp theo là ta cần tạo một record để quá trình thẩm định diễn ra thành công.
-- Và vì các dịch vụ các dịch vụ AWS liên kết khá là khăng khít với nhau nên ta chỉ cần click vào **Create record in route 53**.
+- Click **Create**, and the ACM is created, but its status will be **Pending validation**. The next step is to create a record for the validation process to succeed.
+- As AWS services are tightly integrated, you simply need to click **Create record in Route 53**.
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.2-createACM/003-createACM.png)
 
-- Giao diện tạo record hiện ra, nó sẽ tạo ra một CNAME record để tiến hành validation cho domain của chúng ta.
-- Click vào **Create records**
+- The record creation interface appears, generating a CNAME record for validation of our domain.
+- Click **Create records**.
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.2-createACM/004-createACM.png)
 
-- Tạo record thành công.
+- Record creation is successful.
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.2-createACM/005-createACM.png)
 
-- Sau khi tạo xong record thì ACM cũng đã thẩm định thành công domain của chúng ta và giờ domain của chúng ta đã có chứng chỉ ssl/tls. Bạn có thể truy cập `https://workshop-01.bibichannel.site` để xem chứng chỉ.
+- After creating the record, ACM successfully validates our domain, and now our domain has an SSL/TLS certificate. You can access `https://workshop-01.bibichannel.site` to view the certificate.
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.2-createACM/006-createACM.png)

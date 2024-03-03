@@ -6,41 +6,42 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-Trong bước này, chúng ta sẽ cần tạo một VPC có 1 public/private subnet.
-VPC này sẽ được dùng để triển khai môi trường development cho React App của chúng ta thông qua Cloud9 Service.
 
-Tổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như sau:
+In this step, we will need to create a VPC with one public/private subnet. This VPC will be used to deploy the development environment for our React Appliaction via the Cloud9 Service.
+
+The architecture overview after completing this step will be as follows:
 
 ![VPC](/images/2-prerequiste/2.1-createVPC/001-createVPC.png)
 
-Ta sẽ sử dụng tính năng **VPC and more** để tiến hành tạo nhanh VPC.
+We will utilize the **VPC and more** feature to quickly create the VPC.
 
-Trong giao diện **Create VPC**
 
-- Chọn tính năng **VPC and more**
-- Phần **Name tag auto-generation** ta tích chọn và tiến hành nhập: `workshop-01`
-- **IPv4 CIDR block**, nhập `10.10.0.0/16`
+In the **Create VPC** interface:
+
+- Select the **VPC and more** feature.
+- In the **Name tag auto-generation** section, check the box and enter: `workshop-01`.
+- For IPv4 CIDR block, enter `10.10.0.0/16`.
 
 ![VPC](/images/2-prerequiste/2.1-createVPC/002-createVPC.png)
 
-- Ở phần **Number of Availability Zones (AZs)** ta chọn 1
-- Tiếp đó **Number of public subnets** và **Number of private subnets** ta đều chọn 1
+- In the **Number of Availability Zones (AZs)** section, choose 1.
+- Next, for both **Number of public subnets** and **Number of private subnets**, select 1 each.
 
 ![VPC](/images/2-prerequiste/2.1-createVPC/003-createVPC.png)
 
-- Tiếp toggle **Customize subnets CIDR blocks** ta tiến hành cấu hình lại CIDR cho 2 subet:
+- Then, toggle **Customize subnets CIDR blocks** and reconfigure the CIDR for the 2 subnets:
   - Public subnet: `10.10.1.0/24`
   - Private subnet: `10.10.2.0/24`
-- **NAT gateways** ta sẽ chọn: **None**
-- **VPC endpoints** ta cũng sẽ chọn: **None**
-- Sau đó ta **Create VPC**
+- For **NAT gateways** select: **None**
+- Similarly, **VPC endpoints**, select: **None**
+- Finally, click **Create VPC**
 
 ![VPC](/images/2-prerequiste/2.1-createVPC/004-createVPC.png)
 
 {{% notice note%}}
-**Tại sao không tạo luôn NAT Gateway?**. Trên diagram kiến trúc ban đầu đúng là có NAT Gateway. Nhưng mình sẽ hướng dẫn bạn tạo nó ở phần sau. Khi chúng ta biết rằng NAT sẽ có vai trò gì trong mô hình này.
+**Why not create the NAT Gateway now?** The initial architecture diagram indeed includes a NAT Gateway. However, I will guide you on how to create it in the following section. We will understand the role of NAT in this model.
 
 {{% /notice %}}
 
-Để tìm hiểu cách tạo VPC thủ công với public/private subnet các bạn có thể tham khảo bài lab :
-[Làm việc với Amazon VPC](https://000003.awsstudygroup.com/vi/)
+To learn how to manually create a VPC with public/private subnets, you can refer to the lab:
+[Start with amazon VPC](https://000003.awsstudygroup.com/)

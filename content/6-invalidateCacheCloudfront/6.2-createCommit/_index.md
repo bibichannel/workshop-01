@@ -6,27 +6,27 @@ chapter : false
 pre : " <b> 6.2 </b> "
 ---
 
-Ta sẽ thực hiện chỉnh sửa code của dự án, commit lên CodeCommit để pipeline của chúng ta chạy tự động sau đó nó sẽ deploy lên S3 bucket và tự động thực hiện Invalidation Cloudfront để cập nhật nội dung code mới nhất.
+We will edit the project's code, commit to CodeCommit so that our pipeline runs automatically, then it will deploy to the S3 bucket and automatically perform Invalidation Cloudfront to update the latest code content.
 
-1. Chỉnh sửa source code.
-- Để cho nhanh mình sẽ edit thẳng trên console của CodeCommit. Thực tế sẽ không như vậy, hãy sử dụng Cloud9 để phát triển dự án của chúng ta
-- Chỉnh như hình dưới đây và commit nó.
+1. To speed things up, I'll edit the source code directly in the CodeCommit console. In reality, you should use a proper development environment like Cloud9 for your project development.
+
+- Edit the code as shown in the image below and commit it.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.2-createCommit/001-commit.png)
 
-2. Quay lại CodeCommit ta thấy nó đã nhận thấy thay đổi trên source code của chúng ta và pipeline của chúng ta đã được kích hoạt. Sau khi đợi một khoảng thời gian pipeline của chúng ta đã chạy thành công.
+2. Back in CodeCommit, you'll see that it has detected the changes in our source code, and our pipeline has been triggered. After waiting for a while, our pipeline has run successfully.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.2-createCommit/002-commit.png)
 
-- Chọn view detail ở action **InvalidateCloudfront** ta thấy thông tin lệnh call API của ta đã thành công và Invalidation đã được tạo.
+- Select view detail on the **InvalidateCloudfront** action to see that our API call command has been successful and the Invalidation has been created.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.2-createCommit/003-commit.png)
 
-- Mở console của **Cloudfront** ta truy cập vào **Distributions** và chọn **Invalidations** ta thấy thông tin của Invalidation được tạo ra.
+- Go to the **CloudFront** console, access **Distributions**, and select **Invalidations**. You'll see the information for the created Invalidation.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.2-createCommit/004-commit.png)
 
-- Tiếp theo ta truy cập `https://workshop-01.bibichannel.site` để kiểm tra sự thay đổi.
+- Next, access `https://workshop-01.bibichannel.site` to check for the changes.
 
 | Before | After|
 |:------:|:------:|

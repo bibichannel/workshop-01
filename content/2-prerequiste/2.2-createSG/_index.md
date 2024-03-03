@@ -6,29 +6,29 @@ chapter : false
 pre : " <b> 2.2 </b> "
 ---
 
-Vì ta sẽ tạo Cloud9 no-ingress ec2 instance nên ta cần phải tạo Security group cho các interface enpoint của dịch vụ **Session Manager**. Các kết nối này sẽ được mã hoá TLS qua HTTPS nên ta cần phải tạo inbound rule cho phép mở port 443.
+As we will be creating a Cloud9 no-ingress EC2 instance, we need to create a **Security Group** for the **Session Manager** service's endpoint interfaces. These connections will be encrypted via TLS over HTTPS, so we need to create an inbound rule to allow port 443.
 
-1. Truy cập giao diện quản trị dịch vụ VPC
-- Click **Security Group**.
-- Click **Create security group**.
+1. Access the VPC service management interface:
+- Click on **Security Groups**.
+- Click on **Create security group**.
 
 ![SG](/images/2-prerequiste/2.2-createSG/001-createSG.png)
 
-2. Trong giao diện Create security group
-- Tại mục **Security group name**, điền `VPC Endpoint`.
-- Tại mục **Description**, điền `Allow traffic to the endpoint`.
-- Tại mục VPC, click vào và chọn VPC bạn đã tạo cho bài lab này.
+2. In the Create security group interface:
+- In the **Security group name** field, enter `VPC Endpoint`.
+- In the **Description** field, enter `Allow traffic to the endpoint`..
+- Under VPC, click and select the VPC you have created for this lab.
 
 ![SG](/images/2-prerequiste/2.2-createSG/002-createSG.png)
 
-- Cấu hình **inbound rule** và **outbound rule** cho SG ta chọn như hình dưới.
+- Configure the **inbound rule** and **outbound rule** for the SG as shown below.
 
 ![SG](/images/2-prerequiste/2.2-createSG/003-createSG.png)
 
 {{% notice note%}}
-Với inbound rule có source là CIDR của VPC cho phép các tài nguyên nằm trong VPC có thể gửi traffic tới security group này.
+For the inbound rule with the source CIDR of the VPC, it allows resources within the VPC to send traffic to this security group.
 
 {{% /notice %}}
 
-- Ta click **Create security group**
+- Click on **Create security group**
 

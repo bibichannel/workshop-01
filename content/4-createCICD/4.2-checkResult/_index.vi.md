@@ -11,8 +11,7 @@ Sau khi chạy 1 pipeline từ CodePipeline mà ta vừa mới tạo. Tiếp sau
 1. Kiểm tra bucket
 
 - Ta truy cập vào console của [S3](https://s3.console.aws.amazon.com/s3/buckets)
-Ở đây ta thấy ngoài bucket mà ta đã tạo ở [bước 2]()
-
+- Ở đây ta thấy ngoài bucket mà ta đã tạo ở [bước 2.4](../../2-prerequiste/2.4-createS3/)
 - Thì CodePipeline sẽ tạo ra thêm 1 bucket nữa để nó lưu trữ artifact trong quá trình pipeline
 
 ![IMAGE](/images/4-createCICD/4.2-checkResult/001-check.png)

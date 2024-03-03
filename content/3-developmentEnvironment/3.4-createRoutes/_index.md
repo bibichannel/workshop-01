@@ -1,33 +1,31 @@
 ---
-title : "Create Routes for private route table"
+title : "Create Routes"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
 pre : " <b> 3.4 </b> "
 ---
 
-Tạo Route table - Private và stick vào các private subnet.
+To create a Private Route Table and associate it with private subnets:
 
-Trong giao diện VPC
-- Chọn Route Tables
-- Chọn **private route table**
+In the VPC interface:
+- Select Route Tables.
+- Choose the private route table.
 
 ![Image](/images/3-developmentEnvironment/3.4-createRoutes/001-createRoute.png)
 
-Trong giao diện Route table private
-- Ta chọn **Edit routes**
-
+In the private route table interface:
+- Select **Edit routes**.
 ![Image](/images/3-developmentEnvironment/3.4-createRoutes/002-createRoute.png)
 
-Trong giao diện edit routes
-- Ta add thêm route mới với Destionation là ra internet
-- Muốn ra internet ta sẽ target vào NAT gateway với ID là NAT gateway ta vừa mới tạo
-- Sau đó ta save nó lại
+In the **Edit routes** interface:
+- Add a new route with the destination to the internet.
+- To route traffic to the internet, target the NAT gateway with the ID of the NAT gateway you just created.
+- Then, save it.
 
 ![Image](/images/3-developmentEnvironment/3.4-createRoutes/003-createRoute.png)
 
-Quay lại giao diện Route table private ta thấy
-- Routes định tuyến traffic ra internet thông qua NAT gateway đã được thêm vào.
+Returning to the private route table interface, you will see that routes for routing traffic to the internet through the NAT gateway have been added.
 
 ![Image](/images/3-developmentEnvironment/3.4-createRoutes/004-createRoute.png)
 

@@ -1,46 +1,46 @@
 ---
-title : "Add stage to CodePipeline"
+title : "Add Stage in CodePipeline"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 6.1 </b> "
 ---
 
-- Truy cập vào console của **CodePipeline**, chọn **Pipeline**, click vào **react-deploy-pipline**, sau đó chọn **Edit**.
+- Access the **CodePipeline** console, select **Pipeline**, click on **react-deploy-pipeline**, then choose **Edit**.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/001-add.png)
 
-- Sau đó cuộn xuống dưới cùng click **Add stage**.
+- Scroll down to the bottom and click **Add stage**.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/002-add.png)
 
-- Nhập tên cho stage `InvalidateCloudfront`. Sau đó click **Add stage**.
+- Enter the name for the stage as `InvalidateCloudfront`. Then click **Add stage**.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/003-add.png)
 
-- Chọn **Add action group**,
+- Select **Add action group**,
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/004-add.png)
 
-- Tiếp theo ta đặt tên là `Invalidation`.
-- **Action provider** ta chọn là CodeBuild. Ta sẽ sử dụng CodeBuild để chạy một câu lệnh gọi api của cloudfront yêu cầu nó invalidation.
-- Phần region ta chọn trùng với region của CodePipeline.
-- Input artifact ta sẽ chọn **SourceArtif**
-- Nhấn **Create project**
+- Next, name it as `Invalidation`.
+- Choose the **Action provider** as **CodeBuild**. We will use CodeBuild to execute a command to call the CloudFront API for invalidation.
+- For the region, select the same as the region of CodePipeline.
+- Select Input artifact as **SourceArtif**.
+- Click **Create project**.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/005-add.png)
 
-- Giao diện **Create build project** hiện ra. Ta đặt tên cho project là `workshop-01-invalidation`.
+- The interface for **Create build project** appears. Name the project `workshop-01-invalidation`.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/006-add.png)
 
-- Service role ta sẽ chọn **New service**. Với service này bạn sẽ build thất bại lần đầu tiên, vì nó không có quyền truy cập Cloudfront để tạo Invalidate. Vì vậy bạn hãy đính kèm thêm policy `CloudFrontFullAccess`.
+- For the service role, select **New service**. With this service, your first build will fail because it doesn't have access to CloudFront to create invalidations. So attach the **CloudFrontFullAccess** policy to it.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/007-add.png)
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/008-add.png)
 
-- Tiếp theo tới phần buildspec, ta sẽ thêm cấu hình trực tiếp như sau:
+- Next, in the buildspec section, add the configuration directly as follows:
 
 ```yaml
 version: 0.2
@@ -53,18 +53,18 @@ phases:
      
 ```
 
-Với `E350YLUNXCX5JQ` là distribution id của Could ta tạo ở [bước 5.3](../../5-publicWebsite&Distribution/5.3-createCloudfront/)
+Where  `E350YLUNXCX5JQ`  is the distribution id of CloudFront we created in [step 5.3](../../5-publicWebsite&Distribution/5.3-createCloudfront/)
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/009-add.png)
 
-- Các phần cấu hình còn lại ta giữ như mặc định.
-- Sau đó ta nhấn **Continue to Codepipeline**
-- Quay trở lại giao diện **Edit action**, ta thấy thông báo project của chúng ta đã tạo thành công.
-- Chọn single build và nhấn **Create Action**
+- Keep the remaining configurations as default.
+- Then press **Continue to Codepipeline**.
+- Back in the **Edit action** interface, we see the notification that our project has been successfully created.
+- Choose single build and click **Create Action**.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/010-add.png)
 
-- Action đã được tạo, ta cuộn chuột lên trên và click **Save**.
+- The action has been created, scroll up and click **Save**.
 
 ![IMAGE](/images/6-invalidateCacheCloudfront/6.1-addStagePipeline/011-add.png)
 

@@ -11,7 +11,7 @@ pre : " <b> 5.4 </b> "
 
 ![IMAGE](/images/5-publicWebsite&Distribution/5.4-createRecord/001-createRecord.png)
 
-- Ta chọn **Route traffic to** Cloudfront
+- Ta chọn **Route traffic to Cloudfront**
 - Rồi chọn url cloudfront distribution ta đã tạo ở [bước 5.3](../5.3-createCloudfront/).
 - Nhấn **Create records**.
 

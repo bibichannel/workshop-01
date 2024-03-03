@@ -6,20 +6,20 @@ chapter : false
 pre : " <b> 3.2 </b> "
 ---
 
-Để tạo được NAT gateway ta cần phải tạo một Elastic IP public để gán vào NAT gateway.
+To create a NAT gateway, we need to allocate a public Elastic IP to assign to the NAT gateway.
 
-Truy cập EC2
-- Chọn **Elastic IPs**
-- Chọn **Allocate Elastic IP address**
+Access  EC2
+- Select **Elastic IPs**.
+- Click on **Allocate Elastic IP address**.
 
 ![IMAGE](/images/3-developmentEnvironment/3.2-createElasticIP/001-createEIP.png)
 
-Trong giao diện Allocate Elastic IP address
-- **Network border group** chọn đúng region bạn đang thực hành. Ở đây mình chọn **us-east-1** 
-- **Public IPv4 address pool**, chọn **Amazon’s pool of IPv4 addresses**
-- Chọn **Allocate**
+In the Allocate Elastic IP address interface:
+- For **Network border group**, choose the correct region you are practicing in. Here, I select **us-east-1**.
+- For P**ublic IPv4 address pool**, select **Amazon’s pool of IPv4 addresses**.
+- Click **Allocate**
 
 ![IMAGE](/images/3-developmentEnvironment/3.2-createElasticIP/002-createEIP.png)
 
-Vậy là ta đã tạo thành công Elastic IP.
+Now, you have successfully created an Elastic IP.
 

@@ -6,11 +6,11 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-Trong phần này các bạn sẽ cần tạo các dịch vụ cơ bản trước khi tiến hành tạo môi trường phát triển cho React app. Bao gồm các dịch vụ như: VPC, Subnet, Security group, Interface Enpoint, S3 và CodeCommit.
+In this section, you will need to create basic services before proceeding to create the development environment for the React app. These services include: VPC, Subnet, Security group, Interface Endpoint, S3, and CodeCommit.
 
-### Nội dung
-- [Tạo VPC ](2.1-createVPC/)
-- [Tạo Security Group](2.2-createSG/)
-- [Tạo Interface Enpoint](2.3-createInterface/)
-- [Tạo S3 bucket](2.4-createS3/)
-- [Tạo CodeCommit](2.5-createCodeCommit/)
+### Content
+- [Create VPC ](2.1-createVPC/)
+- [Create Security Group](2.2-createSG/)
+- [Create Interface Enpoint](2.3-createInterface/)
+- [Create S3 bucket](2.4-createS3/)
+- [Create CodeCommit](2.5-createCodeCommit/)
