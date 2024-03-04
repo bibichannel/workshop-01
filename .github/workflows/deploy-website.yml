@@ -3,7 +3,7 @@ run-name: ${{ github.actor }}
 on:
   push:
     branches:
-      - gh-pages 
+      - master
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
