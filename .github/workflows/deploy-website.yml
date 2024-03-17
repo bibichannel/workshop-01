@@ -16,17 +16,17 @@ jobs:
         with:
           hugo-version: 'latest'
       
-      # - name: Setup Pages
-      #   id: pages
-      #   uses: actions/configure-pages@v4
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
 
-      # - name: Edit editURL [params]
-      #   run: |
-      #     sed -i 's#editURL = ".*"#editURL = \"${{ steps.pages.outputs.base_url }}\"#g' config.toml
-      #     cat config.toml
+      - name: Edit editURL [params]
+        run: |
+          sed -i 's#editURL = ".*"#editURL = \"${{ steps.pages.outputs.base_url }}\"#g' config.toml
+          cat config.toml
      
       - name: Build
-        run: hugo --gc --minify
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
