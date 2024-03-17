@@ -22,7 +22,7 @@ jobs:
 
       - name: Edit editURL [params]
         run: |
-          sed -i "s/editURL = \".*\"/editURL = \"${{ steps.pages.outputs.base_url }}\"/g" config.toml
+          sed -i 's#editURL = #editURL = \"${{ steps.pages.outputs.base_url }}\"#g' config.toml
           cat config.toml
      
       - name: Build
